@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <img src="./assets/logo.svg" width="160" alt="medium logo">
+                </div>
+                <nav>
+                    <div class="search"><a href="#search"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a></div>
+                    <div class="bookmark"><a href="#bookmark"><i class="fa-regular fa-bookmark fa-lg"></i></a></div>
+                    <div class="alarm"><a href="#alarm"><i class="fa-regular fa-bell fa-lg"></i></a></div>
+                    <div class="account">
+                        <a href="#resume">Resume Membership</a>
+                        <div class="avatar">T</div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="cards">
+                <div class="bar">
+                    <button class="bar-item tablink" onclick="openTab(event,'Following')">Following</button>
+                    <button class="bar-item tablink selected" onclick="openTab(event,'Recommended')">Recommended for you</button>
+                </div>
+                <div class="cards-listing" id="recommended">
+                    <div class="card-item">
+                        <div class="card-item-text">                            
+                            <div class="card-item-author">
+                                <img src="https://placeimg.com/25/25/people" alt="author">
+                                <span><strong>kolby slish</strong> in <strong>Udacity Eng e data</strong></span>
+                            </div> 
+                            <div class="card-item-content">
+                                <h2 class="card-title">React state management in 2002 - Return of the redux</h2>
+                                <p class="card-description">At the beginning of the year if you told me I'd be publishing a recommendation to use Redux I would have laughed in you face. Yet here bla bla bla</p>
+                                <div class="card-footer">
+                                    <div class="card-footer-details">
+                                        <span class="card-date">Dec 3</span>
+                                        <span class="card-min">4 min read</span>
+                                        <span class="card-label"><a href="#react">React</a></span>
+                                        <span class="card-note">Popular on Medium</span>
+                                    </div>
+                                    <div class="card-footer-actions">
+                                        <a href="#bookmarkthis"><i class="fa-regular fa-bookmark"></i></a>
+                                        <a href="#more"><i class="fa-solid fa-ellipsis"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item-image">
+                            <img src="https://placeimg.com/250/167/tech" alt="card item image">
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="card-item-text"> 
+                            <div class="card-item-author">
+                                <img class="round" src="https://placeimg.com/25/25/people" alt="author">
+                                <span><strong>Navoda Nilakski</strong></span>
+                            </div> 
+                            <div class="card-item-content">
+                                <h2 class="card-title">How to sanitize your express app againts MongoDb injection & Cross-Site Scripting</h2>
+                                <p class="card-description">Easiest way to sanitize your express app.</p>
+                                <div class="card-footer">
+                                    <div class="card-footer-details">
+                                        <span class="card-date">Dec 19</span>
+                                        <span class="card-min">6 min read</span>
+                                        <span class="card-label"><a href="#react">Web Development</a></span>
+                                        <span class="card-note">Based on your reading history</span>
+                                    </div>
+                                    <div class="card-footer-actions">
+                                        <a href="#bookmarkthis"><i class="fa-regular fa-bookmark fa-lg"></i></a>
+                                        <a href="#more"><i class="fa-solid fa-ellipsis"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item-image">
+                            <img src="https://placeimg.com/250/167/tech" alt="card item image">
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="card-item-text"> 
+                            <div class="card-item-author">
+                                <img class="round" src="https://placeimg.com/25/25/people" alt="author">
+                                <span><strong>Divyesh Baalani</strong> in <strong>Dhiwise</strong></span>
+                            </div> 
+                            <div class="card-item-content">
+                                <h2 class="card-title">React 18 new features and updates</h2>
+                                <p class="card-description">Know about some cool features and updates of React 18</p>
+                                <div class="card-footer">
+                                    <div class="card-footer-details">
+                                        <span class="card-date">Nov 24</span>
+                                        <span class="card-min">4 min read</span>
+                                        <span class="card-label"><a href="#react">React.js</a></span>
+                                        <span class="card-note">Popular on Medium</span>
+                                    </div>
+                                    <div class="card-footer-actions">
+                                        <a href="#bookmarkthis"><i class="fa-regular fa-bookmark fa-lg"></i></a>
+                                        <a href="#more"><i class="fa-solid fa-ellipsis"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item-image">
+                            <img src="https://placeimg.com/250/167/tech" alt="card item image">
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="card-item-text"> 
+                            <div class="card-item-author">
+                                <img class="round" src="https://placeimg.com/25/25/people" alt="author">
+                                <span><strong>Vsevolod Ulyanovich</strong> in <strong>Fively Blog</strong></strong></span>
+                            </div> 
+                            <div class="card-item-content">
+                                <h2 class="card-title">15 best web App Ideas for Startup in 2021</h2>
+                                <p class="card-description">15 startup ideas and technologies that could make you a Millionaire</p>
+                                <div class="card-footer">
+                                    <div class="card-footer-details">
+                                        <span class="card-date">Oct 19</span>
+                                        <span class="card-min">6 min read</span>
+                                        <span class="card-label"><a href="#react">Web Development</a></span>
+                                        <span class="card-note">Popular on Medium</span>
+                                    </div>
+                                    <div class="card-footer-actions">
+                                        <a href="#bookmarkthis"><i class="fa-regular fa-bookmark fa-lg"></i></a>
+                                        <a href="#more"><i class="fa-solid fa-ellipsis"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item-image">
+                            <img src="https://placeimg.com/250/167/tech" alt="card item image">
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="card-item-text">                            
+                            <div class="card-item-author">
+                                <img src="https://placeimg.com/25/25/people" alt="author">
+                                <span><strong>kolby slish</strong> in <strong>Udacity Eng e data</strong></span>
+                            </div> 
+                            <div class="card-item-content">
+                                <h2 class="card-title">Understanding re-rendering and memoization in 1react</h2>
+                                <p class="card-description">The following are quick tips to increase preformance in you React application by Understanding re-rendering and memoization. To better bla bla</p>
+                                <div class="card-footer">
+                                    <div class="card-footer-details">
+                                        <span class="card-date">Dec 6/span>
+                                        <span class="card-min">4 min read</span>
+                                        <span class="card-label"><a href="#react">React</a></span>
+                                        <span class="card-note">Popular on Medium</span>
+                                    </div>
+                                    <div class="card-footer-actions">
+                                        <a href="#bookmarkthis"><i class="fa-regular fa-bookmark"></i></a>
+                                        <a href="#more"><i class="fa-solid fa-ellipsis"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item-image">
+                            <img src="https://placeimg.com/250/167/tech" alt="card item image">
+                        </div>
+                    </div>
+                    <div class="card-item">
+                        <div class="card-item-text">                            
+                            <div class="card-item-author">
+                                <img src="https://placeimg.com/25/25/people" alt="author">
+                                <span><strong>Arun Kashhyap</strong> in <strong>Nerd For Tech</strong></span>
+                            </div> 
+                            <div class="card-item-content">
+                                <h2 class="card-title">Why get Rid of Promises To Fetch Data in React?</h2>
+                                <p class="card-description">How You Can Make Your code well Structured !!</p>
+                                <div class="card-footer">
+                                    <div class="card-footer-details">
+                                        <span class="card-date">Jul 5/span>
+                                        <span class="card-min">4 min read</span>
+                                        <span class="card-label"><a href="#react">React</a></span>
+                                        <span class="card-note">Popular on Medium</span>
+                                    </div>
+                                    <div class="card-footer-actions">
+                                        <a href="#bookmarkthis"><i class="fa-regular fa-bookmark"></i></a>
+                                        <a href="#more"><i class="fa-solid fa-ellipsis"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-item-image">
+                            <img src="https://placeimg.com/250/167/tech" alt="card item image">
+                        </div>
+                    </div>
+                </div>
+                <div class="cards-listing" id="following"></div>
+
+            </div>
+            <aside>
+                <div class="container-aside">
+                    <div class="card-twitter-connect">
+                        <div class="medium-twitter-logo">
+                            <img width="50" src="./assets/medium-connect.png"> + 
+                            <div class="twitter-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25" class="de"><path d="M22.3 4.3c-.82.51-1.72.88-2.67 1.08a4.25 4.25 0 0 0-6.18-.12 4.3 4.3 0 0 0-1.26 3.03c0 .34.04.67.08 1a12.2 12.2 0 0 1-8.81-4.52 4.8 4.8 0 0 0-.62 2.14 4.44 4.44 0 0 0 1.92 3.6 4.13 4.13 0 0 1-1.91-.55v.07c0 2.06 1.47 3.8 3.44 4.21-.37.08-.74.13-1.15.15l-.76-.07a4.32 4.32 0 0 0 3.98 2.99A9.03 9.03 0 0 1 3 19.14l-1-.06A12.26 12.26 0 0 0 8.6 21c7.88 0 12.2-6.55 12.17-12.18.02-.23.02-.41 0-.62a8.06 8.06 0 0 0 2.15-2.23c-.77.37-1.6.6-2.45.7a4.1 4.1 0 0 0 1.84-2.38"></path></svg>
+                            </div>
+                        </div>
+                        <p>Discover Medium writers you already follow on Twitter</p>
+                        <button>
+                            <div class="twitter-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25" class="de"><path d="M22.3 4.3c-.82.51-1.72.88-2.67 1.08a4.25 4.25 0 0 0-6.18-.12 4.3 4.3 0 0 0-1.26 3.03c0 .34.04.67.08 1a12.2 12.2 0 0 1-8.81-4.52 4.8 4.8 0 0 0-.62 2.14 4.44 4.44 0 0 0 1.92 3.6 4.13 4.13 0 0 1-1.91-.55v.07c0 2.06 1.47 3.8 3.44 4.21-.37.08-.74.13-1.15.15l-.76-.07a4.32 4.32 0 0 0 3.98 2.99A9.03 9.03 0 0 1 3 19.14l-1-.06A12.26 12.26 0 0 0 8.6 21c7.88 0 12.2-6.55 12.17-12.18.02-.23.02-.41 0-.62a8.06 8.06 0 0 0 2.15-2.23c-.77.37-1.6.6-2.45.7a4.1 4.1 0 0 0 1.84-2.38"></path></svg>
+                            </div>
+                            <span>Connect to Twitter</span>
+                        </button>
+                        <a href="#later">Maybe later</a>
+                    </div>
+                    <div class="recommended-topics">
+                        <h3>Recommended Topics</h3>
+                        <div class="topics-btn">
+                            <a href="#A">Technology</a>
+                            <a href="#b">Money</a>
+                            <a href="#c">Busines</a>
+                            <a href="#d">Productivity</a>
+                            <a href="#e">Psuchology</a>
+                            <a href="#f">Mindfulness</a>
+                            <a href="#f">Art</a>
+                        </div>
+                    </div>
+                    <div class="who-follow">
+                        <h3>Who to follow</h3>
+                        <div class="who-follow-item">
+                            <div>
+                                <div class="who-follow-avatar">
+                                    <img src="https://placeimg.com/40/40/people">
+                                </div>
+                                <div class="who-follow-name">
+                                    <h4>Lessing</h4>
+                                    <p>Professor</p>
+                                </div>
+                            </div>
+                            <button>Follow</button>
+                        </div>
+                        <div class="who-follow-item">
+                            <div>
+                                <div class="who-follow-avatar">
+                                    <img src="https://placeimg.com/40/40/people">
+                                </div>
+                                <div class="who-follow-name">
+                                    <h4>David Wineberg</h4>
+                                    <p>Professor</p>
+                                </div>
+                            </div>
+                            <button>Follow</button>
+                        </div>
+                    </div>
+                </div> 
+            </aside>
+        </main>
+    </div>
+</body>
+</html>
